@@ -1,0 +1,367 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #1c1e21;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Auth Container */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.auth-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 432px; /* Fixed width for better alignment */
+  margin: 0 auto;
+}
+
+.auth-title {
+  font-size: 32px; /* Facebook style */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+  color: #1c1e21;
+}
+
+.auth-subtitle {
+  text-align: center;
+  color: #606770;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* Form Styles */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.name-fields {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.name-fields .input-field {
+  flex: 1;
+  min-width: 0; /* Important for flexbox shrinking */
+}
+
+.input-field {
+  padding: 11px 16px; /* Better padding */
+  border: 1px solid #dddfe2;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #f5f6f7;
+  width: 100%;
+  font-family: inherit;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #1877f2;
+  background-color: white;
+  box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 12px;
+  color: #606770;
+  font-weight: normal;
+  margin-bottom: 4px;
+}
+
+/* Birthday Styles */
+.birthday-selectors {
+  display: flex;
+  gap: 12px;
+}
+
+.birthday-selectors select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #dddfe2;
+  border-radius: 6px;
+  background-color: white;
+  font-size: 15px;
+}
+
+/* Gender Options */
+.gender-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.gender-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #dddfe2;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 120px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.gender-option:hover {
+  border-color: #1877f2;
+}
+
+.gender-option input[type="radio"] {
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Button Styles */
+.auth-button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  font-family: inherit;
+}
+
+.auth-button.primary {
+  background-color: #00a400;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 60px;
+  border-radius: 6px;
+  margin: 10px auto;
+  display: block;
+  width: auto;
+  min-width: 194px;
+}
+
+.auth-button.primary:hover:not(:disabled) {
+  background-color: #42b72a;
+}
+
+.auth-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: #1877f2;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: normal;
+  padding: 0;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.toggle-button:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.auth-footer {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #dadde1;
+}
+
+.forgot-password {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.forgot-password a {
+  color: #1877f2;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* Error Message */
+.error-message {
+  background-color: #ffe6e6;
+  color: #d93025;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  border: 1px solid #f5c6cb;
+  text-align: center;
+}
+
+/* Dashboard Styles */
+.dashboard {
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.dashboard-header {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.dashboard-header h1 {
+  color: #1877f2;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logout-button {
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.logout-button:hover {
+  background-color: #166fe5;
+}
+
+.dashboard-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.welcome-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.welcome-card h2 {
+  color: #1c1e21;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.user-details {
+  margin-top: 20px;
+  text-align: left;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user-details p {
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+.auth-button{
+  background-color: #166fe5;
+  color: #dddfe2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth-card {
+    margin: 0 10px;
+    padding: 15px;
+    max-width: 100%;
+  }
+  
+  .name-fields {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .gender-options {
+    flex-direction: column;
+  }
+  
+  .gender-option {
+    min-width: auto;
+  }
+  
+  .auth-button.primary {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 10px;
+  }
+  
+  .auth-card {
+    padding: 15px;
+  }
+  
+  .auth-title {
+    font-size: 24px;
+  }
+}
